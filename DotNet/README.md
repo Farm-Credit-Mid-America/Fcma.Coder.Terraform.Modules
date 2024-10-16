@@ -13,8 +13,8 @@ Automatically install the .NET version of your choice
 
 ```tf
 module "dotnet" {
-  source   = ""
-  agent_id = coder_agent.example.id
+  source   = "git::https://github.com/Farm-Credit-Mid-America/Fcma.Coder.Terraform.Modules.git//DotNet"
+  agent_id = coder_agent.main.id
   install_version = "8.0"
 }
 ```
