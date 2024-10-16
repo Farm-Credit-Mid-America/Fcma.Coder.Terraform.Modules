@@ -25,7 +25,7 @@ resource "coder_script" "node-js" {
   display_name = "node-js"
   icon         = "./Node.js_logo.svg"
   script = templatefile("${path.module}/run.sh", {
-    INSTALL_VERSION = var.install_version
+    INSTALL_VERSION : var.install_version
   })
   run_on_start = true
 }

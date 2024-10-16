@@ -25,7 +25,7 @@ resource "coder_script" "dotnet" {
   display_name = "dotnet"
   icon         = "./dotnet.png"
   script = templatefile("${path.module}/run.sh", {
-    INSTALL_VERSION = var.install_version
+    INSTALL_VERSION : var.install_version
   })
   run_on_start = true
 }
