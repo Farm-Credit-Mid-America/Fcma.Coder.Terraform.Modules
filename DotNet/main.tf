@@ -23,7 +23,7 @@ variable "install_version" {
 resource "coder_script" "dotnet" {
   agent_id     = var.agent_id
   display_name = "dotnet"
-  icon         = "https://avatars.githubusercontent.com/u/9011267?v=4"
+  icon         = "./dotnet.png"
   script = templatefile("${path.module}/run.sh", {
     INSTALL_VERSION = var.install_version
   })

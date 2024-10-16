@@ -23,7 +23,7 @@ variable "install_version" {
 resource "coder_script" "node-js" {
   agent_id     = var.agent_id
   display_name = "node-js"
-  icon         = "https://avatars.githubusercontent.com/u/9011267?v=4"
+  icon         = "./Node.js_logo.svg"
   script = templatefile("${path.module}/run.sh", {
     INSTALL_VERSION = var.install_version
   })

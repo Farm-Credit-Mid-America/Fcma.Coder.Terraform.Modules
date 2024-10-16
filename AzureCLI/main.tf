@@ -17,7 +17,7 @@ variable "agent_id" {
 resource "coder_script" "azure-cli" {
   agent_id     = var.agent_id
   display_name = "azure-cli"
-  icon         = "https://avatars.githubusercontent.com/u/9011267?v=4"
+  icon         = "./Microsoft_Azure.svg"
   script = templatefile("${path.module}/run.sh", {})
   run_on_start = true
 }
