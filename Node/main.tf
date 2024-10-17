@@ -23,7 +23,7 @@ variable "install_version" {
 resource "coder_script" "node-js" {
   agent_id     = var.agent_id
   display_name = "node-js"
-  icon         = filebase64("${path.module}/nodejs.svg")
+  icon         = "data:svg+xml/jpeg;base64, ${filebase64("${path.module}/nodejs.svg")}"
   script = templatefile("${path.module}/run.sh", {
     INSTALL_VERSION : var.install_version
   })

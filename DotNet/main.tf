@@ -23,7 +23,7 @@ variable "install_version" {
 resource "coder_script" "dotnet" {
   agent_id     = var.agent_id
   display_name = "dotnet"
-  icon         = filebase64("${path.module}/dotnet.png")
+  icon         = "data:image/jpeg;base64, ${filebase64("${path.module}/dotnet.png")}"
   script = templatefile("${path.module}/run.sh", {
     INSTALL_VERSION : var.install_version
   })
