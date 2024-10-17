@@ -27,4 +27,4 @@ rm packages-microsoft-prod.deb
 sudo apt $QUIET_APT_INSTALL update
 
 sudo apt-get $QUIET_APT_INSTALL update && \
-    sudo apt-get $QUIET_APT_INSTALL install -y dotnet-sdk-$INSTALL_VERSION
+    sudo apt-get $QUIET_APT_INSTALL install -y dotnet-sdk-${INSTALL_VERSION}
