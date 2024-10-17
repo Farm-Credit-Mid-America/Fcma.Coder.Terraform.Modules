@@ -17,7 +17,7 @@ variable "agent_id" {
 resource "coder_script" "azure-cli" {
   agent_id     = var.agent_id
   display_name = "azure-cli"
-  icon         = "data:svg+xml/jpeg;base64, ${filebase64("${path.module}/azure.svg")}"
+  icon         = "data:image/svg+xml;base64, ${filebase64("${path.module}/azure.svg")}"
   script = templatefile("${path.module}/run.sh", {})
   run_on_start = true
 }
